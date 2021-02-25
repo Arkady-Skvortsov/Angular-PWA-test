@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap");
+
+$Merri: "Merriweather", serif;
+$select-border: yellow;
+$select-focus: red;
+$w: white;
+$b: black;
+
+@mixin button($h, $w, $f, $border, $back, $bx-sh, $scale) {
+  height: $h;
+  width: $w;
+  font-size: $f;
+  cursor: pointer;
+  border: 0;
+  border-radius: $border;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background: $back;
+  transition: 0.8s;
+  -o-transition: 0.8s;
+  -moz-transition: 0.8s;
+  -webkit-transition: 0.8s;
+
+  &:hover {
+    box-shadow: $bx-sh;
+    transform: scale($scale);
+  }
+}
